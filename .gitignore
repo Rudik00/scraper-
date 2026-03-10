@@ -31,3 +31,8 @@ npm-debug.log*
 .env.*.local
 *.pem
 *.key
+
+
+__pycache__
+data/
+venv/
