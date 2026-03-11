@@ -18,7 +18,8 @@ def parse_products(soup):
         if price_elem:
             price = price_elem.get_text(strip=True)
 
-        img_link = card.find("img")["src"]
+        img_elem = card.find("img")
+        img_link = img_elem["src"] if img_elem else None
 
         found.append(
             Product(name=title, price=price, id=id_elem, img=img_link)
